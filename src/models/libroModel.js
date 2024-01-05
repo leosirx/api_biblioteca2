@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+require('dotenv').config();
 
-mongoose.connect('mongodb://127.0.0.1:27017/biblioteca', {
+mongoose.connect(process.env.MONGO_DB, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
